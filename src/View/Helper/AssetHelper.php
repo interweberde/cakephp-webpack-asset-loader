@@ -62,8 +62,8 @@ class AssetHelper extends Helper
 
         $assets = $this->manifest['entrypoints'][$name];
 
-        $this->_writeEntries($assets, 'js', $options);
-        $this->_writeEntries($assets, 'css', $options);
+        return $this->_writeEntries($assets, 'js', $options + ['js' => []]) .
+            $this->_writeEntries($assets, 'css', $options + ['css' => []]);
     }
 
     public function loadEntryDeferred($name, array $options = []): void {
