@@ -1,5 +1,5 @@
 <?php
-namespace WebpackAssetLoader\View\Helper;
+namespace Interweberde\WebpackAssetLoader\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\View\Helper;

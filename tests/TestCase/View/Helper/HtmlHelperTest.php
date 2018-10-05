@@ -1,9 +1,9 @@
 <?php
-namespace WebpackManifestLoader\Test\TestCase\View\Helper;
+namespace Interweberde\WebpackManifestLoader\Test\TestCase\View\Helper;
 
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
-use WebpackManifestLoader\View\Helper\HtmlHelper;
+use Interweberde\WebpackManifestLoader\View\Helper\HtmlHelper;
 
 /**
  * WebpackManifestLoader\View\Helper\HtmlHelper Test Case

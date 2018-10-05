@@ -3,24 +3,32 @@
     "description": "Webpack Asset handling plugin for CakePHP. It takes an exported manifest.json file and then automatically loads all assets for an specified entry point.",
     "type": "cakephp-plugin",
     "license": "MIT",
-    "require": {
-        "cakephp/cakephp": "^3.6"
+    "homepage": "https://github.com/interweberde/cakephp-webpack-asset-loader",
+    "authors": [
+        {
+            "name": "Daniel Melchior @ Interweber",
+            "homepage": "https://github.com/interweberde",
+            "role": "Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/interweber/cakephp-webpack-asset-loader/issues",
+        "source": "https://github.com/interweber/cakephp-webpack-asset-loader"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7.14|^6.0"
+        "cakephp/cakephp": "^3.6"
     },
     "platform": {
         "php": "^7.1"
     },
     "autoload": {
         "psr-4": {
-            "WebpackAssetLoader\\": "src/"
+            "Interweberde\\WebpackAssetLoader\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WebpackAssetLoader\\Test\\": "tests/",
-            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+            "Interweberde\\WebpackAssetLoader\\Test\\": "tests/"
         }
     }
 }
