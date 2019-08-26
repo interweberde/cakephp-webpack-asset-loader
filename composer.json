@@ -16,10 +16,13 @@
         "source": "https://github.com/interweber/cakephp-webpack-asset-loader"
     },
     "require-dev": {
-        "cakephp/cakephp": "^3.6"
-    },
-    "platform": {
-        "php": "^7.1"
+        "cakephp/cakephp": "^3.6",
+        "phpstan/phpstan": "^0.11.15",
+        "squizlabs/php_codesniffer": "^3.4",
+        "interweberde/interweber-cs": "^1.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "sirbrillig/phpcs-variable-analysis": "^2.7",
+        "ext-dom": "*"
     },
     "autoload": {
         "psr-4": {
@@ -30,5 +33,17 @@
         "psr-4": {
             "Interweberde\\WebpackAssetLoader\\Test\\": "tests/"
         }
+    },
+    "scripts": {
+        "lint": "phpstan analyse --level 7 src/ tests/",
+        "cs-check": "phpcs src/ tests/",
+        "cs-fix": "phpcbf src/ tests/"
+    },
+    "require": {
+        "php": "^7.3",
+        "ext-json": "*",
+        "ext-dom": "*",
+        "sebastian/diff": "1.4.3",
+        "phpunit/phpunit": "6"
     }
 }

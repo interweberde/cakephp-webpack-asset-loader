@@ -3,14 +3,14 @@ namespace Interweberde\WebpackAssetLoader\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\View\Helper;
-use Cake\View\View;
+use Cake\View\Helper\HtmlHelper;
 
 /**
  * Asset helper
+ *
+ * @property HtmlHelper $Html
  */
-class AssetHelper extends Helper
-{
-
+class AssetHelper extends Helper {
     /**
      * Default configuration.
      *
@@ -44,6 +44,10 @@ class AssetHelper extends Helper
 
         try {
             $json = file_get_contents($this->getConfig('manifest'));
+
+            if (!$json) {
+                throw new \Exception('could not load manifest file.');
+            }
         } catch (\Exception $e) {
             throw new \Exception('could not load manifest file.');
         }
@@ -76,8 +80,6 @@ class AssetHelper extends Helper
         $assets['js'] = $assets['js'] ?? [];
         $assets['css'] = $assets['css'] ?? [];
 
-        $publicPath = $this->manifest['publicPath'];
-
         $deferredAssets = Configure::read($this->getConfig('configurationKey'));
         foreach ($assets['js'] as $asset) {
             // use asset as key to avoid duplicates
@@ -104,10 +106,6 @@ class AssetHelper extends Helper
     }
 
     private function _writeEntries(array $assets, string $type, array $options): string {
-        if ('js' !== $type && 'css' !== $type) {
-            throw new \Exception("Unknown asset type '$type'.");
-        }
-
         $assets[$type] = $assets[$type] ?? [];
 
         $publicPath = $this->manifest['publicPath'];

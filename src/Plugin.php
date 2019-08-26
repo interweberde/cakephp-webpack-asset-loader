@@ -7,6 +7,5 @@ use Cake\Core\BasePlugin;
 /**
  * Plugin for WebpackAssetLoader
  */
-class Plugin extends BasePlugin
-{
+class Plugin extends BasePlugin {
 }
