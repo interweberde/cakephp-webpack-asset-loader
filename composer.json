@@ -44,6 +44,6 @@
         "ext-json": "*",
         "ext-dom": "*",
         "sebastian/diff": "1.4.3",
-        "phpunit/phpunit": "6"
+        "phpunit/phpunit": "6.2.4"
     }
 }
