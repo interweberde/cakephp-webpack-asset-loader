@@ -16,4 +16,4 @@ script:
   - if [[ $STATIC_ANALYSIS == true ]]; then ./vendor/bin/phpstan analyse -l max -c phpstan.neon --no-interaction --no-progress src/ tests/; fi
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - if [[ $COVERAGE == true ]]; then bash <(curl -s https://codecov.io/bash); fi
