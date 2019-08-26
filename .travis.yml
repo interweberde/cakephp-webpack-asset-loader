@@ -5,7 +5,6 @@ matrix:
         env: STATIC_ANALYSIS=true
       - php: "7.3"
         env: COVERAGE=true
-      - php: "nightly"
 
 install: composer install
 
