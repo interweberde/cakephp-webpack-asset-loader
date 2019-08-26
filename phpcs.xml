@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="Interweber">
+    <description>Coding standard based on CakePHP, but allowing Braces on the same Line.</description>
+
+    <arg name="extensions" value="php" />
+     <!-- Include the whole CakePHP standard -->
+    <rule ref="Interweber" />
+    <rule ref="VariableAnalysis"/>
+</ruleset>

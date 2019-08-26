@@ -1,0 +1,18 @@
+language: php
+matrix:
+    include:
+      - php: "7.3"
+        env: STATIC_ANALYSIS=true
+      - php: "7.3"
+        env: COVERAGE=true
+
+install: composer install
+
+script:
+  - if [[ $COVERAGE != true ]]; then ./vendor/bin/phpunit; fi
+  - if [[ $COVERAGE == true ]]; then ./vendor/bin/phpunit --coverage-clover=clover.xml; fi
+  - if [[ $STATIC_ANALYSIS == true ]]; then ./vendor/bin/phpcs src/ tests/; fi
+  - if [[ $STATIC_ANALYSIS == true ]]; then ./vendor/bin/phpstan analyse -l max -c phpstan.neon --no-interaction --no-progress src/ tests/; fi
+
+after_success:
+  - if [[ $COVERAGE == true ]]; then bash <(curl -s https://codecov.io/bash); fi

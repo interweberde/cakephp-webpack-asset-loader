@@ -1,0 +1,38 @@
+{
+  "entrypoints": {
+    "main": {
+      "js": [
+        "vendors.js",
+        "main.js"
+      ],
+      "js.map": [
+        "vendors.js.map",
+        "main.js.map"
+      ],
+      "css": [
+        "main.css"
+      ]
+    },
+    "nocss": {
+      "js": [
+        "nocss.js"
+      ]
+    }
+  },
+  "main.js": {
+    "src": "main.js",
+    "integrity": "hash-main"
+  },
+  "main.js.map": {
+    "src": "main.js.map",
+    "integrity": "hash-main-map"
+  },
+  "publicPath": "/dist/",
+  "vendors.js": {
+    "src": "vendors.js"
+  },
+  "vendors.js.map": {
+    "src": "vendors.js.map",
+    "integrity": "hash-vendors-map"
+  }
+}
