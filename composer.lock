@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "708ac0e70fc9fbaac08322cfafc22f62",
+    "content-hash": "eca13e488a2c2484c2bf748da439730b",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -1666,29 +1666,30 @@
         },
         {
             "name": "cakephp/cakephp-codesniffer",
-            "version": "3.1.1",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp-codesniffer.git",
-                "reference": "682e79fda294c4383e094a2a881e16dcf1130750"
+                "reference": "efde994335214c996b6b7c35ce50a1b88279ed12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/682e79fda294c4383e094a2a881e16dcf1130750",
-                "reference": "682e79fda294c4383e094a2a881e16dcf1130750",
+                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/efde994335214c996b6b7c35ce50a1b88279ed12",
+                "reference": "efde994335214c996b6b7c35ce50a1b88279ed12",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6",
-                "squizlabs/php_codesniffer": "^3.0.0"
+                "php": "^7.2",
+                "slevomat/coding-standard": ">=6.0 <6.2",
+                "squizlabs/php_codesniffer": "~3.5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "<6.0"
+                "phpunit/phpunit": "^7.1"
             },
             "type": "phpcodesniffer-standard",
             "autoload": {
                 "psr-4": {
-                    "CakePHP\\": "CakePHP"
+                    "CakePHP\\": "CakePHP/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1702,12 +1703,12 @@
                 }
             ],
             "description": "CakePHP CodeSniffer Standards",
-            "homepage": "http://cakephp.org",
+            "homepage": "https://cakephp.org",
             "keywords": [
                 "codesniffer",
                 "framework"
             ],
-            "time": "2018-11-30T16:04:05+00:00"
+            "time": "2020-04-20T15:16:49+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -1878,30 +1879,27 @@
         },
         {
             "name": "interweberde/interweber-cs",
-            "version": "v1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/interweberde/interweber-cs.git",
-                "reference": "314c5d15c3cba12f227ef7956a89d4c189e34903"
+                "reference": "8809ab3aa33a00e46c19c5cb918d649f31cf073a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/interweberde/interweber-cs/zipball/314c5d15c3cba12f227ef7956a89d4c189e34903",
-                "reference": "314c5d15c3cba12f227ef7956a89d4c189e34903",
+                "url": "https://api.github.com/repos/interweberde/interweber-cs/zipball/8809ab3aa33a00e46c19c5cb918d649f31cf073a",
+                "reference": "8809ab3aa33a00e46c19c5cb918d649f31cf073a",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp-codesniffer": "^3.0",
+                "cakephp/cakephp-codesniffer": "^4.0",
                 "php": ">=7.2",
                 "squizlabs/php_codesniffer": "^3.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "<6.0"
             },
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "UNLICENSED"
+                "MIT"
             ],
             "authors": [
                 {
@@ -1914,7 +1912,7 @@
                 "codesniffer",
                 "framework"
             ],
-            "time": "2018-12-13T15:36:16+00:00"
+            "time": "2020-07-08T13:36:14+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
@@ -2956,6 +2954,47 @@
             "time": "2019-10-10T23:00:08+00:00"
         },
         {
+            "name": "slevomat/coding-standard",
+            "version": "6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slevomat/coding-standard.git",
+                "reference": "0a7934d7ecdfe402079027513daa3b7e881f315d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/0a7934d7ecdfe402079027513daa3b7e881f315d",
+                "reference": "0a7934d7ecdfe402079027513daa3b7e881f315d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "phpstan/phpdoc-parser": "0.3.5 - 0.4.2",
+                "squizlabs/php_codesniffer": "^3.5.3"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "0.5.0",
+                "jakub-onderka/php-parallel-lint": "1.0.0",
+                "phing/phing": "2.16.2",
+                "phpstan/phpstan": "0.11.19|0.12.5",
+                "phpstan/phpstan-phpunit": "0.11.2|0.12.6",
+                "phpstan/phpstan-strict-rules": "0.11.1|0.12.1",
+                "phpunit/phpunit": "7.5.18|8.5.2"
+            },
+            "type": "phpcodesniffer-standard",
+            "autoload": {
+                "psr-4": {
+                    "SlevomatCodingStandard\\": "SlevomatCodingStandard"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
+            "time": "2020-01-23T15:37:30+00:00"
+        },
+        {
             "name": "squizlabs/php_codesniffer",
             "version": "3.5.3",
             "source": {
@@ -3381,5 +3420,6 @@
     },
     "platform-dev": {
         "ext-dom": "*"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
