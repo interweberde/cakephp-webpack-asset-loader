@@ -32,7 +32,7 @@ class AssetHelper extends Helper {
     public $helpers = ['Html'];
     private $manifest = [];
 
-    public function initialize(array $config) {
+    public function initialize(array $config): void {
         parent::initialize($config);
 
         if (!Configure::read($this->getConfig('configurationKey'))) {
